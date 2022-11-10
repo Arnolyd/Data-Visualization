@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>test</title>
+    <meta charset="utf-8" />
+    <!-- Include the ECharts file you just downloaded -->
+    <script src="echarts.js"></script>
+</head>
+
+<body>
+    <div id="main" style="width: 600px; height: 400px;"></div>
+    <script type="text/javascript">
+        let myChart = echarts.init(document.getElementById('main'));
+
+        let option = {
+            title: {
+                text: 'ECharts Getting Started Example'
+            },
+            tooltip: {},
+            legend: {
+                data: ['sales']
+            },
+            xAxis: {
+                data: ['Shirts', 'Cardigans', 'Chiffons', 'Pants', 'Heels', 'Socks']
+            },
+            yAxis: {},
+            series: [
+                {
+                    name: 'sales',
+                    type: 'bar',
+                    data: [5, 20, 36, 10, 10, 20]
+                }
+            ]
+        };
+
+        myChart.setOption(option);
+    </script>
+</body>
+</html>
